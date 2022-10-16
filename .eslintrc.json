@@ -8,13 +8,14 @@
         "plugin:@typescript-eslint/recommended"
     ],
     "parser": "@typescript-eslint/parser",
-    "overrides": [
-    ],
+    "overrides": [],
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "plugins": [ "@typescript-eslint" ],
+    "plugins": [
+        "@typescript-eslint"
+    ],
     "root": true,
     "rules": {
         "@typescript-eslint/array-type": "warn",
@@ -40,7 +41,13 @@
         "prefer-rest-params": "error", // ts provides better types with rest args over arguments
         "prefer-spread": "error", // ts transpiles spread to apply, so no need for manual apply
         "valid-typeof": "off", // ts(2367)
-        "semi": ["error", "always"],
-        "quotes": ["error", "double"]
+        "semi": [
+            "error",
+            "always"
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ]
     }
 }

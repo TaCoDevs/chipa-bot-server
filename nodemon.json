@@ -2,8 +2,12 @@
     "execMap": {
         "ts": "ts-node"
     },
-    "watch": ["src"],
+    "watch": [
+        "src"
+    ],
     "ext": "ts,json,js",
     "exec": "ts-node ./src/index.ts",
-    "ignore": ["node_modules"]
+    "ignore": [
+        "node_modules"
+    ]
 }

@@ -21,6 +21,7 @@ Server for [Chipa-bot](https://github.com/TaCoDevs/chipa-bot)
 ```sh-session
 npm install
 ```
+
 In .env file
 
 ```bash
@@ -42,7 +43,7 @@ import express from "express";
 const router = express.Router();
 
 router.use("/your-route", (req, res) => {
-    // your code
+  // your code
 });
 
 export default router;
@@ -58,21 +59,22 @@ import express from "express";
 import your_module from "your-module-path";
 
 function API(app: express.Express) {
-    const router = express.Router();
-    app.use("/api", router);
+  const router = express.Router();
+  app.use("/api", router);
 
-    router.use("/your-module", your_module);
+  router.use("/your-module", your_module);
 }
 
 export default API;
 ```
+
 ## Service example
 
 in services/your_service.service.ts
 
 ```js
 class your_service {
-    // your methods
+  // your methods
 }
 
 export default your_service;
@@ -82,20 +84,20 @@ in routes/your-route
 
 ```js
 import express from "express";
-import your_service from "your-service-path"
+import your_service from "your-service-path";
 
 const router = express.Router();
 
-const service = new your_service()
+const service = new your_service();
 
 router.use("/your-route", (req, res) => {
-    try {
-        const myData = service.method()
-        res.status(200).json({ data: myData })
-    } catch (error) {
-        console.error(error)
-        res.status(404).json({data: "method faild"})
-    }
+  try {
+    const myData = service.method();
+    res.status(200).json({ data: myData });
+  } catch (error) {
+    console.error(error);
+    res.status(404).json({ data: "method faild" });
+  }
 });
 
 export default router;
@@ -109,20 +111,20 @@ NO EXAMPLE YET
 
 ```js
 import express from "express";
-import your_service from "your-service-path"
+import your_service from "your-service-path";
 
 const router = express.Router();
 
-const service = new your_service()
+const service = new your_service();
 
 router.use("/your-route", (req, res) => {
-    try {
-        const myData = service.method()
-        res.status(200).json({ data: myData })
-    } catch (error) {
-        console.error(error)
-        res.status(404).json({data: "method faild"})
-    }
+  try {
+    const myData = service.method();
+    res.status(200).json({ data: myData });
+  } catch (error) {
+    console.error(error);
+    res.status(404).json({ data: "method faild" });
+  }
 });
 
 export default router;
