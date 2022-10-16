@@ -100,7 +100,7 @@ router.use("/your-route", (req, res) => {
 export default router;
 ```
 
-## Rrror management with @hapi/boom
+## Error management with @hapi/boom
 
 in routes/your-route
 
