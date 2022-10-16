@@ -13,7 +13,7 @@
 
 ## About
 
-Server for [Chipa-bot]: https://github.com/TaCoDevs/chipa-bot
+Server for [Chipa-bot](https://github.com/TaCoDevs/chipa-bot)
 
 ## Instalation
 
