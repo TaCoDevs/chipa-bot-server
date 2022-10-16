@@ -11,11 +11,11 @@
     </p>
 </div>
 
-## 📕 About
+# 📕 About
 
 Server for [Chipa-bot](https://github.com/TaCoDevs/chipa-bot)
 
-## ⚙️ Instalation
+# ⚙️ Instalation
 
 ```sh-session
 npm install
@@ -64,4 +64,63 @@ function API(app: express.Express) {
 }
 
 export default API;
+```
+## Service example
+
+in services/your_service.service.ts
+
+```js
+class your_service {
+    // your methods
+}
+
+export default your_service;
+```
+
+in routes/your-route
+
+```js
+import express from "express";
+import your_service from "your-service-path"
+
+const router = express.Router();
+
+const service = new your_service()
+
+router.use("/your-route", (req, res) => {
+    try {
+        const myData = service.method()
+        res.status(200).json({ data: myData })
+    } catch (error) {
+        console.error(error)
+        res.status(200).json({data: "method faild"})
+    }
+});
+
+export default router;
+```
+
+## Rrror management with @hapi/boom
+
+in routes/your-route
+
+```js
+import express from "express";
+import your_service from "your-service-path"
+
+const router = express.Router();
+
+const service = new your_service()
+
+router.use("/your-route", (req, res) => {
+    try {
+        const myData = service.method()
+        res.status(200).json({ data: myData })
+    } catch (error) {
+        console.error(error)
+        res.status(200).json({data: "method faild"})
+    }
+});
+
+export default router;
 ```
