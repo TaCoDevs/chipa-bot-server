@@ -104,6 +104,8 @@ export default router;
 
 in routes/your-route
 
+NO EXAMPLE YET
+
 ```js
 import express from "express";
 import your_service from "your-service-path"
