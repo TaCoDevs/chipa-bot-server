@@ -11,11 +11,11 @@
     </p>
 </div>
 
-## About
+## 📕 About
 
 Server for [Chipa-bot](https://github.com/TaCoDevs/chipa-bot)
 
-## Instalation
+## ⚙️ Instalation
 
 ```sh-session
 npm install
