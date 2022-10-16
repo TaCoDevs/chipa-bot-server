@@ -36,7 +36,7 @@ npm run dev
 Making a new Route
 
 ```js
-import express from "express"
+import express from "express";
 
 const router = express.Router();
 
