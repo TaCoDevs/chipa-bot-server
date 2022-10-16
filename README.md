@@ -2,7 +2,7 @@
     <br />
     <p>
         <a>
-            <img src="" width="546" alt="chipa-bot" />
+            <img src="https://i.imgur.com/0KvOXjK.png" width="546" alt="chipa-bot" />
         </a>
     </p>
     <p>
