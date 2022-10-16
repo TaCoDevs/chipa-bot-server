@@ -94,7 +94,7 @@ router.use("/your-route", (req, res) => {
         res.status(200).json({ data: myData })
     } catch (error) {
         console.error(error)
-        res.status(200).json({data: "method faild"})
+        res.status(404).json({data: "method faild"})
     }
 });
 
@@ -121,7 +121,7 @@ router.use("/your-route", (req, res) => {
         res.status(200).json({ data: myData })
     } catch (error) {
         console.error(error)
-        res.status(200).json({data: "method faild"})
+        res.status(404).json({data: "method faild"})
     }
 });
 
