@@ -6,8 +6,8 @@
         </a>
     </p>
     <p>
-        <img src="" alt=".typescript" />
-        <img src="" alt=".express" />
+        <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=TypeScript&logoColor=white" alt=".typescript" />
+        <img src="https://img.shields.io/badge/Express-4caf50?style=for-the-badge&logo=Express&logoColor=black" alt=".express" />
     </p>
 </div>
 
