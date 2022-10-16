@@ -7,7 +7,8 @@
     </p>
     <p>
         <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=TypeScript&logoColor=white" alt=".typescript" />
-        <img src="https://img.shields.io/badge/Express-4caf50?style=for-the-badge&logo=Express&logoColor=black" alt=".express" />
+        <img src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB" alt=".express" />
+        <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt=".nodejs" />
     </p>
 </div>
 
