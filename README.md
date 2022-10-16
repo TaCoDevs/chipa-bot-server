@@ -13,19 +13,21 @@
 
 ## About
 
+Server for [Chipa-bot]: https://github.com/TaCoDevs/chipa-bot
 
 ## Instalation
 
-```bash
+```sh-session
 npm install
 ```
+In .env file
 
-```.env
+```bash
 PORT=<port>
 IP=<your-ip>
 ```
 
-```bash
+```sh-session
 npm run dev
 ```
 
@@ -34,4 +36,32 @@ npm run dev
 Making a new Route
 
 ```js
+import express from "express"
+
+const router = express.Router();
+
+router.use("/your-route", (req, res) => {
+    // your code
+});
+
+export default router;
+```
+
+Adding to API
+
+in routes/index.js
+
+```js
+import express from "express";
+
+import your_module from "your-module-path";
+
+function API(app: express.Express) {
+    const router = express.Router();
+    app.use("/api", router);
+
+    router.use("/your-module", your_module);
+}
+
+export default API;
 ```
