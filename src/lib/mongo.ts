@@ -26,7 +26,32 @@ class mongodb{
         this.mongodb().catch(console.dir);
     }
 
-    // Función que busca la playlist del usuario
+    // Añadir a la playlist
+    async addPlaylist(idUser:number, idSong:string) {
+        try{
+            // Conexión a la base de datos de usuarios
+            const db = this.client.db(DBNAME);
+            const query = {userid:idUser};
+            const addPLDocument = {$push:{"playlist":idSong}};
+            await db.collection("users").updateOne(query, addPLDocument);
+        }catch(err){
+            console.log(err);
+        }
+    }
+
+    async removeFromPlaylist(idUser:number, idSong:string){
+        try{
+            // Conexión a la base de datos de usuarios
+            const db = this.client.db(DBNAME);
+            const query = {userid:idUser};
+            const addPLDocument = {$pull:{"playlist":idSong}};
+            await db.collection("users").updateOne(query, addPLDocument);
+        }catch(err){
+            console.log(err);
+        }
+    }
+
+    // Buscar la playlist del usuario
     async searchPlaylist(idUser:number){
         try{
             // Conexión a la base de datos de usuarios
@@ -38,6 +63,7 @@ class mongodb{
             console.log(err);
         }
     }
+
 }
 
 export default mongodb;

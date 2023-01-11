@@ -17,12 +17,12 @@ const mongo =new mongolo();
 
 
 class PlaylistService {
-  addToPlaylist() {
-    //
+  async addToPlaylist(idUser:number, idSong:string) {
+    await mongo.addPlaylist(idUser, idSong);
   }
 
-  removeToPlaylist() {
-    //
+  async removeToPlaylist(idUser:number, idSong:string) {
+    await mongo.removeFromPlaylist(idUser, idSong);
   }
 
   // Funcion para traerse la playlist del usuario
