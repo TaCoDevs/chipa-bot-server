@@ -12,18 +12,24 @@ iniciar base de datos en libs/base de datos
 
 */
 
+import mongolo from "../lib/mongo";
+const mongo =new mongolo();
+
+
 class PlaylistService {
-    addToPlaylist() {
-        //
-    }
+  addToPlaylist() {
+    //
+  }
 
-    removeToPlaylist() {
-        //
-    }
+  removeToPlaylist() {
+    //
+  }
 
-    getUserPlaylist() {
-        //
-    }
+  // Funcion para traerse la playlist del usuario
+  async getUserPlaylist(idUser:number) {
+    const playlist = await mongo.searchPlaylist(idUser);
+    return await playlist?.playlist;
+  }
 }
 
 export default PlaylistService;

@@ -1,3 +1,5 @@
+// grande chipa
+
 import express from "express";
 import SearchService from "../../services/search.service";
 // import Boom from "@hapi/boom"; falta implementar 
@@ -9,6 +11,7 @@ router.post("/name", async (req, res) => {
     try {
         const { data } = req.body;
         const songs = await service.searchByName(data);
+        console.log(data);
 
         res.status(200).json({ data: songs });
     } catch (error) {
