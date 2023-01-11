@@ -20,6 +20,7 @@ router.get("/test", async (req, res) => {
     } catch (error) {
         console.error(`[SEARCHING ERROR]: ${error}`);
         res.status(404).json(null);
+        
     }
 });
 
