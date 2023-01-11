@@ -8,12 +8,13 @@ const service = new SearchService();
 router.post("/name", async (req, res) => {
     try {
         const { data } = req.body;
+        console.log(req.body);
         const songs = await service.searchByName(data);
 
         res.status(200).json({ data: songs });
     } catch (error) {
         console.error(`[SEARCHING ERROR]: ${error}`);
-        res.status(404).json(null);
+        res.status(404);
     }
 });
 
